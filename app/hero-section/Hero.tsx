@@ -10,10 +10,9 @@ import {
 } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { bodyAnimation, imageAnimation } from "../animations/animations";
-import { Mona_Sans } from "next/font/google";
 import { AnimatedWords } from "../animations/animated-words";
 
-export default function Hero() {
+const Hero = () => {
   return (
     <motion.section
       className="relative
@@ -122,3 +121,5 @@ export default function Hero() {
     </motion.section>
   );
 }
+
+export default Hero;
