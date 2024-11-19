@@ -4,8 +4,8 @@ import { Preloader } from "./animations/preloader/preloader";
 import useBlobity from "blobity/lib/react/useBlobity";
 import { initialBlobityConfig } from "./utils/blobity-config";
 import { useEffect } from "react";
-import { Hero } from "./hero-section/hero";
-import dynamic from "next/dynamic"
+import Hero from "./hero-section/hero";
+import dynamic from "next/dynamic";
 import ReviewGrid from "./review-section/review-grid";
 const Work = dynamic(() => import("./work-section/work"), { ssr: false });
 

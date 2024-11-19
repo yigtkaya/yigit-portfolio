@@ -13,7 +13,7 @@ import { bodyAnimation, imageAnimation } from "../animations/animations";
 import { Mona_Sans } from "next/font/google";
 import { AnimatedWords } from "../animations/animated-words";
 
-export const Hero = () => (
+const Hero = () => (
   <motion.section
     className="relative
         flex h-screen
@@ -120,3 +120,5 @@ export const Hero = () => (
     </div>
   </motion.section>
 );
+
+export default Hero;
