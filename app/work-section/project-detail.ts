@@ -38,7 +38,7 @@ export const devProjects: ProjectDetailProps[] = [
     name: "Project 4",
     description: "Description 4",
     techStack: ["React", "Next.js", "TypeScript"],
-    image: "/hero-img",
+    image: "/hero-img.png",
     available: true,
   },
 ];
