@@ -6,6 +6,7 @@ import { initialBlobityConfig } from "./utils/blobity-config";
 import { useEffect } from "react";
 import { Hero } from "./hero-section/hero";
 import dynamic from "next/dynamic"
+import ReviewGrid from "./review-section/review-grid";
 const Work = dynamic(() => import("./work-section/work"), { ssr: false });
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
       <main className="flex flex-col items-center justify-center">
         <Hero />
         <Work />
+        <ReviewGrid />
       </main>
     </>
   );
