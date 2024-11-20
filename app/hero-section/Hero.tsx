@@ -13,6 +13,14 @@ import { bodyAnimation, imageAnimation } from "../animations/animations";
 import { AnimatedWords } from "../animations/animated-words";
 
 const Hero = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const element = document.getElementById(targetId);
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <motion.section
       className="relative
@@ -35,7 +43,7 @@ const Hero = () => {
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         {/** connect button */}
         <div>
-          <Link href="#">
+          <Link href="#contact" onClick={handleScroll}>
             <motion.button
               className="hidden rounded-full border-[#e4ded7] border-2 py-2 px-4
                        font-semibold text-[#e4ded7] sm:block md:text-[16px] lg:block"
