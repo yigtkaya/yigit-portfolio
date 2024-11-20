@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 
 
 import Navbar from "./navbar/navbar";
-import { Hero } from "./hero-section/hero";
+// import { Hero } from "./hero-section/hero";
 const Work = dynamic(() => import("./work-section/work"), { ssr: false });
 const About = dynamic(() => import("./about-section/about"), { ssr: false }); 
 const Contact = dynamic(() => import("./contact-section/contact"), { ssr: false });
@@ -33,7 +33,7 @@ export default function Home() {
       <Preloader />
       <Navbar />
       <main className="flex flex-col items-center justify-center">
-        <Hero />
+        {/* <Hero /> */}
         <Work />
         {/* <ReviewGrid /> */}
         <About />
