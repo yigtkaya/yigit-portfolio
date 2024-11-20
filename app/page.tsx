@@ -1,20 +1,21 @@
 "use client";
 
 import { Preloader } from "./animations/preloader/preloader";
+import Hero from "./hero-section/hero";
+
+
 import useBlobity from "blobity/lib/react/useBlobity";
 import { initialBlobityConfig } from "./utils/blobity-config";
 import { useEffect } from "react";
+
 import dynamic from "next/dynamic";
-
-
 import Navbar from "./navbar/navbar";
-// import { Hero } from "./hero-section/hero";
 const Work = dynamic(() => import("./work-section/work"), { ssr: false });
 const About = dynamic(() => import("./about-section/about"), { ssr: false }); 
 const Contact = dynamic(() => import("./contact-section/contact"), { ssr: false });
 const Footer = dynamic(() => import("./footer-section/footer"), { ssr: false });
 
-export default function Home() {
+const Home = () => {
   const blobityInstance = useBlobity(initialBlobityConfig);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function Home() {
       <Preloader />
       <Navbar />
       <main className="flex flex-col items-center justify-center">
-        {/* <Hero /> */}
+        <Hero />
         <Work />
         {/* <ReviewGrid /> */}
         <About />
@@ -42,4 +43,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;

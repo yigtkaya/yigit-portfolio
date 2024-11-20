@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { bodyAnimation, imageAnimation } from "../animations/animations";
 import { AnimatedWords } from "../animations/animated-words";
 
-export const Hero = () => {
+export default function Hero() {
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
