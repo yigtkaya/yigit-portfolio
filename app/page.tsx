@@ -5,14 +5,15 @@ import useBlobity from "blobity/lib/react/useBlobity";
 import { initialBlobityConfig } from "./utils/blobity-config";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
-import ReviewGrid from "./review-section/review-grid";
-import Navbar from "./navbar/navbar";
 
-const Hero = dynamic(() => import("./hero-section/hero"), { ssr: false });
+
+import Navbar from "./navbar/navbar";
+import { Hero } from "./hero-section/hero";
 const Work = dynamic(() => import("./work-section/work"), { ssr: false });
-const About = dynamic(() => import("./about-section/about"), { ssr: false });
+const About = dynamic(() => import("./about-section/about"), { ssr: false }); 
 const Contact = dynamic(() => import("./contact-section/contact"), { ssr: false });
 const Footer = dynamic(() => import("./footer-section/footer"), { ssr: false });
+
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityConfig);
 
