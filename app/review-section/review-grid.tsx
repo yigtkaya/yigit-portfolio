@@ -1,6 +1,8 @@
+import { motion } from "framer-motion";
 import AnimatedBody from "../animations/animated-body";
 import AnimatedWords2 from "../animations/animated-word2";
 import ReviewCard from "./review-card";
+import { reviewDetails } from "./review-details";
 
 const Reviews = () => {
   return (
@@ -21,7 +23,12 @@ const Reviews = () => {
           charSpace={""}
         />
       </div>
-      <ReviewCard />
+
+      <motion.div className="grid w-100% max-w-[1345px] grid-cols-1 grpid-rows-6 place-content-center place-items-center gap-x-6 gap-y-6 sm:grid-cols-2 sm:grid-rows-3 lg:grid-cols-2 lg:grid-rows-1">
+        {reviewDetails.map((review, index) => (
+          <ReviewCard key={index} {...review} index={index} />
+        ))}
+      </motion.div>
     </section>
   );
 };
