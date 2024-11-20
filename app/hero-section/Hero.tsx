@@ -30,7 +30,7 @@ const Hero = () => {
         alt="bg"
         width={1920}
         height={1080}
-        className="absolute top-0 left-0 bg-center w-full h-full bg-cover z-0"
+        className="absolute top-0 left-0 bg-center w-full h-full bg-cover z-0 pointer-events-none"
       />
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         {/** connect button */}
@@ -80,17 +80,17 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center">
         <div className="relative flex flex-col items-center justify-center pt-10">
           <motion.div
-            className="absolute bottom-[-90px] mx-auto sm:bottom-[-100px] md:bottom-[-130px] lg:bottom-[-160px]"
+            className="absolute bottom-[-120px] mx-auto sm:bottom-[-130px] md:bottom-[-160px] lg:bottom-[-190px]"
             variants={imageAnimation}
           >
             <AnimatedWords
-              title="Hasan Yiğit Kaya"
-              style="inline-block overflow-visible pt-1"
+              title="Hasan Yigit Kaya"
+              style="inline-block overflow-visible pt-1 pb-4 font-sans"
             />
             <Image
               src={profile}
               priority
-              data-blobity-tooltip="Yigtkaya"
+              data-blobity-tooltip="Yigit Kaya"
               data-blobity-tooltip-position="top"
               data-blobity-invert="false"
               alt="profile"
