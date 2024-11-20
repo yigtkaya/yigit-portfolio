@@ -7,7 +7,9 @@ import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import ReviewGrid from "./review-section/review-grid";
 import Hero from "./hero-section/hero";
+
 const Work = dynamic(() => import("./work-section/work"), { ssr: false });
+const About = dynamic(() => import("./about-section/about"), { ssr: false });
 
 export default function Home() {
   const blobityInstance = useBlobity(initialBlobityConfig);
@@ -30,6 +32,7 @@ export default function Home() {
         <Hero />
         <Work />
         <ReviewGrid />
+        <About />
       </main>
     </>
   );

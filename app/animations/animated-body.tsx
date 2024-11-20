@@ -4,9 +4,9 @@ import { useEffect } from "react";
 
 type AnimatedBodyProps = {
     text: string;
-    className: string;
-    wordSpace: string;
-    charSpace: string;
+    className?: string;
+    wordSpace?: string;
+    charSpace?: string;
 }
 
 export default function AnimatedBody({ text, className, wordSpace, charSpace }: AnimatedBodyProps) {
