@@ -47,7 +47,7 @@ const Contact = () => {
 
             <div className="bor der mt-5 flex w-[298px] items-center gap-1 md:w-[335px] md:gap-2.5">
               <Link
-                href="/"
+                href="mailto:hasanyigitkaya@gmail.com"
                 target="_blank"
                 aria-label="Send me an email"
                 className="mt-1 w-[147px] flex-1 underline underline-offset-2 hover:no-underline sm:mt-2 sm:w-[170px] md:mt-3 lg:mt-4"
@@ -64,9 +64,9 @@ const Contact = () => {
                 }
               />
               <Link
-                href="https://cal.com/"
+                href="https://cal.com/hasan-yigit-kaya-5dtqai"
                 target="_blank"
-                aria-label="Send me an email"
+                aria-label="Book a call"
                 className="bor der mt-1 w-[110px] flex-1 underline underline-offset-2 hover:no-underline sm:mt-2 sm:w-[147px] md:mt-3 md:-ml-[3px] md:w-[120px] lg:mt-4"
               >
                 <AnimatedBody

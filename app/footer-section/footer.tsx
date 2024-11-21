@@ -15,12 +15,12 @@ const Footer = () => {
         <AnimatedBody text={`Copyright ${year}`} className="m-0 p-0" />
         <div className="flex flex-col sm:flex-row sm:gap-1 md:gap-2">
           <Link
-            href="https://www.youtube.com/@frontendadvance"
+            href="https://www.twitter.com/yigtkaya"
             target="_blank"
-            aria-label="Youtube Profile"
+            aria-label="Twitter Profile"
           >
             <span className="underline underline-offset-2 hover:no-underline">
-              <AnimatedBody text="Youtube Profile" className="m-0 p-0" />
+              <AnimatedBody text="Twitter Profile" className="m-0 p-0" />
             </span>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectGrid from "./project-grid";
+import WorkGrid from "./work-grid";
 import Image from "next/image";
 
 const Work = () => {
@@ -15,7 +15,7 @@ const Work = () => {
         height={1080}
         className="absolute left-0 top-0 bg-center w-full h-full bg-cover"
       />
-      <ProjectGrid />
+      <WorkGrid />
     </section>
   );
 };
