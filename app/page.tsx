@@ -1,8 +1,8 @@
 "use client";
 
 import { Preloader } from "./animations/preloader/preloader";
-import Hero from "./hero-section/hero";
 
+import Hero from "./hero-section/Hero";
 
 import useBlobity from "blobity/lib/react/useBlobity";
 import { initialBlobityConfig } from "./utils/blobity-config";
