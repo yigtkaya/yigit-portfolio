@@ -1,17 +1,38 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import About from "./about";
 import Experience from "./experience";
+import Projects from "./projects";
 import { Nav } from "./nav";
 import { useIntersectionObserver } from "./userInteractionHook";
 
 export default function Home() {
   const [activeId, setActiveId] = useState('about'); // Default to 'about'
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  
   useIntersectionObserver(setActiveId); // Our custom hook in action!
 
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   return (
-    <main className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <div className="relative">
+      {/* Cursor spotlight effect */}
+      <div 
+        className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+        style={{
+          background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
+        }}
+      ></div>
+      
+      <main className="relative z-10 mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
       <div className="lg:flex lg:justify-between lg:gap-4">
         {/* Left Column (Header) */}
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
@@ -19,6 +40,9 @@ export default function Home() {
             <h1 className="text-4xl font-bold leading-tight text-slate-200 sm:text-5xl lg:text-6xl">
               Hasan Yigit Kaya
             </h1>
+            <h3 className="text-lg font-medium leading-tight text-slate-400 sm:text-xl lg:text-2xl">
+              Software Developer
+            </h3>
             <p className="mt-6 text-lg text-slate-400">
               I&apos;m a software developer with a passion for building applications and companies.
             </p>
@@ -118,10 +142,11 @@ export default function Home() {
                 Projects
               </h2>
             </div>
-            {/* ... Your project components go here ... */}
+            <Projects />
           </section>
         </div>
       </div>
     </main>
+    </div>
   );
 }
